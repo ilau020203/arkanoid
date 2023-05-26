@@ -5,6 +5,7 @@ import { GameObject } from "./GameObject";
 import { Player } from "./Player";
 import { Statistic } from "./Statistic";
 import { Canvas } from "./canvas";
+import { Information } from "./enums";
 
 export class Game implements GameObject {
     private canvas: Canvas;
@@ -90,7 +91,7 @@ export class Game implements GameObject {
         loss ? (str = "Увы, Вы проиграли!\n") : (str = "Ура, Вы выиграли!\n");
   
         alert(str + this.showStatistic());
-  
+        this.statistic?.update(Information.Clear);
         this.stop = true;
         setTimeout(() => {
           this.start(this.fabric);
