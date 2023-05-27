@@ -129,10 +129,13 @@ export class Ball implements GameObject{
             
     }
 
-    getSpeed(){
-        return this.speed;
-    }
-    setSpeed(speed : [number, number]){
-        this.speed = speed;
-    }
+  getSpeed() {
+    return this.speed;
+  }
+  setSpeed(speed: [number, number]) {
+    this.speed = speed;
+  }
+  push(ball: GameObject) {
+    return
+  }
 }

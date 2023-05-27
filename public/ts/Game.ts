@@ -61,7 +61,7 @@ export class Game implements GameObject {
       this.ballArray.push(fabric.generateBall(this.player));
   
       this.blockArray.clear();
-      this.blockArray.push(fabric.generateBlockArray(9, 5));
+      this.blockArray.pushArray(fabric.generateBlockArray(9, 5));
   
       this.draw();
     }
@@ -98,6 +98,9 @@ export class Game implements GameObject {
         }, 1);
         return;
       }
+    }
+    push(ball: GameObject) {
+      return
     }
   }
   

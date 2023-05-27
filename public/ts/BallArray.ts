@@ -15,8 +15,8 @@ export class BallArray implements GameObject {
   subscribe(stat: Statistic) {
     this.statistic = stat;
   }
-  push(ball: Ball) {
-    this.array.push(ball);
+  push(ball: GameObject) {
+    this.array.push(ball as unknown as Ball);
   }
   move(canvas: Canvas, player: Player, blockArray: BlockArray) {
     for (let i = 0; i < this.array.length; i++) {
