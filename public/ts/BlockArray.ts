@@ -28,7 +28,7 @@ export class BlockArray implements GameObject {
   }
   draw(canvas?: Canvas) {
     for (let i = 0; i < this.array.length; i++) {
-      if (!this.array[i].getLife()) {
+      if (this.array[i].getLife() <= 0) {
         if (!this.statistic) return;
         this.statistic.update(Information.BlockIsDestroyed);
         this.array.splice(i, 1);
