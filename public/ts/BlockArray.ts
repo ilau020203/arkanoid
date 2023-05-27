@@ -13,13 +13,17 @@ export class BlockArray implements GameObject {
   subscribe(stat: Statistic) {
     this.statistic = stat;
   }
-  push(array: Block[]) {
+  push(block: GameObject) {
+    this.array.push(block as unknown as Block);
+  }
+  pushArray(array: Block[]) {
     this.array = array;
     if (!this.statistic) return;
     for (let item of this.array) {
       item.subscribe(this.statistic);
     }
   }
+
   clear() {
     this.array = [];
   }

@@ -36,4 +36,7 @@ export class Block implements GameObject {
     this.life--;
     this.rect.color = Color[this.life];
   }
+  push(ball: GameObject) {
+    return
+  }
 }

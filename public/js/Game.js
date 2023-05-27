@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Game = void 0;
+const enums_1 = require("./enums");
 class Game {
     constructor(canvas, player, ballArray, blockArray, fabric) {
         this.canvas = canvas;
@@ -53,6 +54,7 @@ class Game {
         return output;
     }
     checkGameState() {
+        var _a;
         let [loss, end] = [false, false];
         if (this.ballArray.getArray().length == 0) {
             [loss, end] = [true, true];
@@ -64,6 +66,7 @@ class Game {
             let str = "";
             loss ? (str = "Увы, Вы проиграли!\n") : (str = "Ура, Вы выиграли!\n");
             alert(str + this.showStatistic());
+            (_a = this.statistic) === null || _a === void 0 ? void 0 : _a.update(enums_1.Information.Clear);
             this.stop = true;
             setTimeout(() => {
                 this.start(this.fabric);

@@ -147,4 +147,7 @@ export class Ball implements GameObject {
   setSpeed(speed: [number, number]) {
     this.speed = speed;
   }
+  push(ball: GameObject) {
+    return
+  }
 }

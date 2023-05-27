@@ -53,4 +53,7 @@ export class Player implements GameObject {
     getRect() {
       return this.rect;
     }
+    push(ball: GameObject) {
+      return
+    }
   }
